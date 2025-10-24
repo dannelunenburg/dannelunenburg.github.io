@@ -1,0 +1,129 @@
+
+:root {
+    --black: black;
+    --white: white;
+    --dark: #303336;
+    --med: #7D8182;
+    --light: #CACECE;
+    --red: #99334D;
+    --blue: #127DA1;
+    --gold: #E6B31A;
+    --pink: #F5A3B8;
+    --cream: #FAE6D1;
+    --spacing: 24px;
+    --small: 8px;
+    --serif: "Alegreya", "Georgia", serif;
+    --sans: "Alegreya Sans", "Trebuchet MS", sans-serif;
+}
+
+* {
+    box-sizing: inherit;
+}
+  
+html {
+    height: 100%;
+    box-sizing: border-box;
+    @media (hover: hover) {
+        overscroll-behavior: none;
+    }
+}
+  
+body {
+    height: 100%;
+    background-color: var(--white);
+    margin: 0;
+}
+
+p, nav {
+    font-family: var(--sans);
+}
+
+h1, h2, h3 {
+    font-family: var(--serif);
+    color: var(--dark);
+}
+
+p {
+    font-size: 1em;
+    margin: var(--spacing) 0;
+    color: var(--black);
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 500;
+    margin: 0;
+}
+
+a {
+    color: var(--blue);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--dark);
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    display: inline-block;
+    padding-right: var(--spacing);
+}
+
+img {
+    max-width: min(100%, 1024px);
+    max-height: 640px;
+    margin: var(--spacing) 0;
+}
+
+header {
+    background-color: var(--cream);
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    display: grid;
+    place-items: center;
+    font-size: 1.5em;
+    & a {
+        color: var(--red);
+        font-weight: 600;
+    }
+}
+
+main {
+    margin: var(--spacing);
+}
+
+footer {
+    font-family: var(--serif);
+    color: var(--med);
+    & .footertext {
+        margin: var(--small) var(--spacing);
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.poleng {
+    background-image: url("images/poleng.png");
+    background-repeat: repeat;
+    min-height: 256px;
+}
+
+.pattern {
+    background-image: url("images/pattern.png");
+    background-repeat: repeat-x;
+    height: 60px;
+}
